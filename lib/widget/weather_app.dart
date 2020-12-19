@@ -17,7 +17,7 @@ class WeatherApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    _weatherViewModel = Provider.of<WeatherViewModel>(context, listen: false);
+    _weatherViewModel = Provider.of<WeatherViewModel>(context, listen: true);
 
     return Scaffold(
       appBar: AppBar(
@@ -46,7 +46,7 @@ class WeatherApp extends StatelessWidget {
                         "\tWelcome to Weather Forecast, which receives weather forecasts from a variety of weather forecasters and calculates the most likely result and shows you. "
                         "\n\n\tType the name of the city whose weather you want to know in the search field above."
                         "\n\n\tYou can find information about the weather forecast of big cities, especially capital cities.",
-                        style: TextStyle(fontSize: 22),
+                        style: TextStyle(fontSize: 24),
                         textAlign: TextAlign.center,
                       ),
       ),
@@ -76,11 +76,11 @@ class _HavaDurumuGeldiState extends State<HavaDurumuGeldi> {
     // TODO: implement initState
     super.initState();
     _refreshIndicator = Completer<void>();
-    // debugPrint("init state tetiklendi");
+
     WidgetsBinding.instance.addPostFrameCallback((_) {
       var kisaltma = Provider.of<WeatherViewModel>(context, listen: false)
           .havaDurumuKisaltmasi();
-      // debugPrint("kisaltma kodu:" + kisaltma);
+
       Provider.of<MyThemeViewModel>(context, listen: false)
           .temaDegistir(kisaltma);
     });
@@ -88,7 +88,6 @@ class _HavaDurumuGeldiState extends State<HavaDurumuGeldi> {
 
   @override
   Widget build(BuildContext context) {
-    //  debugPrint("widget build tetiklendi");
     _refreshIndicator.complete();
     _refreshIndicator = Completer<void>();
 
@@ -113,7 +112,7 @@ class _HavaDurumuGeldiState extends State<HavaDurumuGeldi> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Center(child: LastUpdateWidget()), //parametresiz kullanım
+              child: Center(child: LastUpdateWidget()), //parametresiz
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -121,7 +120,7 @@ class _HavaDurumuGeldiState extends State<HavaDurumuGeldi> {
             ),
             Padding(
               padding: const EdgeInsets.all(
-                  16.0), //getirilen hava durumunu parametre olarak geçtik
+                  16.0), //getirilen hava durumunu parametre olarak
               child: Center(
                   child: MaxMinTemperatureWidget(
                 bugununDegerleri:
