@@ -13,7 +13,7 @@ class BackendService {
   }
 }
 
-class CitiesService {
+class City {
   static final List<String> cities = [
     'Kinshasa',
     'Alexandria',

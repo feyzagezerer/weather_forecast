@@ -37,7 +37,7 @@ class _CitySelectWidgetState extends State<CitySelectWidget> {
                   controller: this._typeAheadController,
                 ),
                 suggestionsCallback: (pattern) {
-                  return CitiesService.getSuggestions(pattern);
+                  return City.getSuggestions(pattern);
                 },
                 itemBuilder: (context, String suggestion) {
                   return ListTile(
