@@ -261,7 +261,7 @@ class City {
     'Newark',
     'Albuquerque',
     'Santa Fe',
-    'New York City',
+    'New York',
     'Charlotte',
     'Raleigh',
     'Columbus',

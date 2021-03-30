@@ -59,7 +59,7 @@ class _WeatherAppState extends State<WeatherApp> {
                           child: Column(
                             children: <Widget>[
                               Text(
-                                "\tWelcome to \nWeather Forecast, \nwhich receives weather forecasts from a variety of weather forecasters and calculates the most likely result and shows you. ",
+                                "\tWelcome to \nWeather Forecast, \nwhich receives weather forecasts from a variety of weather forecasters and calculates the most likely result and shows you. \nYou can see the weather forecast of the city you want with the search button.",
                                 // Weather Forecast is an automated weather data aggregator that takes the weather predictions from various forecasters and calculates the most likely outcome.
                                 style: TextStyle(fontSize: 24),
                                 textAlign: TextAlign.center,
